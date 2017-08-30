@@ -38,12 +38,12 @@ public class test {
 	@RequestMapping(value = "/test")
 	public void test2(HttpServletRequest request, HttpServletResponse response) {
 		System.out.println("test2");
-//		try {
-//			response.sendRedirect("http://www.baidu.com");
-//		} catch (IOException e2) {
-//			// TODO Auto-generated catch block
-//			e2.printStackTrace();
-//		}
+		try {
+			response.sendRedirect("http://www.baidu.com");
+		} catch (IOException e2) {
+			// TODO Auto-generated catch block
+			e2.printStackTrace();
+		}
 		
 		try {
 			try {
