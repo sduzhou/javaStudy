@@ -1,4 +1,4 @@
-package cn.dbgo.dingtalk;
+package cn.dbgo.dingtalk.controller;
 
 import java.io.IOException;
 
@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import aspect.UserAccess;
 import cn.dbgo.dingtalk.mapper.StudentMapper;
 import cn.dbgo.dingtalk.model.Student;
+import cn.dbgo.dingtalk.service.test2;
 
 
 
@@ -45,17 +46,17 @@ public class test {
 			e2.printStackTrace();
 		}
 		
-		try {
-			try {
-				request.getRequestDispatcher("/test").forward(request, response);
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		} catch (ServletException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+//		try {
+//			try {
+//				request.getRequestDispatcher("/test").forward(request, response);
+//			} catch (IOException e) {
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			}
+//		} catch (ServletException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 //		Student student = studentMapper.selectByPrimaryKey(12);
 //		try {
 //			test.tt();

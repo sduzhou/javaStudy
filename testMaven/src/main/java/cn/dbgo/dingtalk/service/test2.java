@@ -1,4 +1,4 @@
-package cn.dbgo.dingtalk;
+package cn.dbgo.dingtalk.service;
 
 import javax.annotation.Resource;
 
@@ -11,7 +11,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import aspect.UserAccess;
 import cn.dbgo.dingtalk.mapper.StudentMapper;
-import cn.dbgo.dingtalk.model.Student2;
 
 @Repository
 @Service
