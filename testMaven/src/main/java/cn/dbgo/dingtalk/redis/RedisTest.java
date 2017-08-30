@@ -1,4 +1,4 @@
-package cn.dbgo.dingtalk;
+package cn.dbgo.dingtalk.redis;
 
 import java.beans.BeanInfo;
 import java.beans.Introspector;
