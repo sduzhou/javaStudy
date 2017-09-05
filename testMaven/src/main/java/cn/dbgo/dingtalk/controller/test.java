@@ -1,14 +1,10 @@
 package cn.dbgo.dingtalk.controller;
 
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.cxf.jaxws.endpoint.dynamic.JaxWsDynamicClientFactory;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -95,31 +91,31 @@ public class test {
 	// e.printStackTrace();
 	// }
 	// }
-	public static void main(String args[]) throws Exception {
-		byte[] fileByte = findFileByte();
-		JaxWsDynamicClientFactory jdcf = JaxWsDynamicClientFactory.newInstance();
-		org.apache.cxf.endpoint.Client client = jdcf.createClient("http://192.168.3.3:81/acme/soap/appImport?wsdl");
-		try {
-			client.invoke("appUploadFile", fileByte);
-		} catch (Exception e) {
-			System.err.println(e.getMessage());
-		}
-	}
-
-	public static byte[] findFileByte() throws Exception {
-		File srcFile = new File("/Users/zhoubin/Documents/01_发票管家/发票/didi.pdf");
-//		File srcFile = new File("/Users/zhoubin/Pictures/电子发票流水.png");
-		
-		FileInputStream fis = new FileInputStream(srcFile);
-		ByteArrayOutputStream bos = new ByteArrayOutputStream();
-		byte[] b = new byte[1024];
-		int len = -1;
-		while ((len = fis.read(b)) != -1) {
-			bos.write(b, 0, len);
-		}
-
-		byte[] fileByte = bos.toByteArray();
-		return fileByte;
-	}
+//	public static void main(String args[]) throws Exception {
+//		byte[] fileByte = findFileByte();
+//		JaxWsDynamicClientFactory jdcf = JaxWsDynamicClientFactory.newInstance();
+//		org.apache.cxf.endpoint.Client client = jdcf.createClient("http://192.168.3.3:81/acme/soap/appImport?wsdl");
+//		try {
+//			client.invoke("appUploadFile", fileByte);
+//		} catch (Exception e) {
+//			System.err.println(e.getMessage());
+//		}
+//	}
+//
+//	public static byte[] findFileByte() throws Exception {
+//		File srcFile = new File("/Users/zhoubin/Documents/01_发票管家/发票/didi.pdf");
+////		File srcFile = new File("/Users/zhoubin/Pictures/电子发票流水.png");
+//		
+//		FileInputStream fis = new FileInputStream(srcFile);
+//		ByteArrayOutputStream bos = new ByteArrayOutputStream();
+//		byte[] b = new byte[1024];
+//		int len = -1;
+//		while ((len = fis.read(b)) != -1) {
+//			bos.write(b, 0, len);
+//		}
+//
+//		byte[] fileByte = bos.toByteArray();
+//		return fileByte;
+//	}
 
 }
