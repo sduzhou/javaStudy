@@ -131,7 +131,11 @@
 			<artifactId>aspectjweaver</artifactId>
 			<version>1.8.10</version>
 		</dependency>
-
+		<dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-spring-boot-starter-jaxws</artifactId>
+            <version>3.1.12</version>
+        </dependency>
 
 
 	</dependencies>
